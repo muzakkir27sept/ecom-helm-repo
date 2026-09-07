@@ -1,0 +1,10 @@
+name: Deploy Ecom API to EKS
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'ecom-api-modern/**'
+
+  workflow_dispatch:
