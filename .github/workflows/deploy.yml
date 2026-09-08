@@ -8,3 +8,15 @@ on:
       - 'ecom-api-modern/**'
 
   workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Helm repository
+        uses: actions/checkout@v5
